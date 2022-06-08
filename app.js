@@ -26,10 +26,11 @@ function init() {
     "Sepia",
     "Threshold",
     "Vintage",
-    "Blur",
+
     "Sharpen",
     "Sobel",
     "Prewitt",
+    "uniform",
     "Reset",
   ];
   filterArea = document.querySelector("footer");
@@ -156,9 +157,6 @@ function filterIt() {
     case "Vintage":
       currentFilter = imageFilter.vintage();
       break;
-    case "Blur":
-      currentFilter = imageFilter.blur();
-      break;
     case "Sharpen":
       currentFilter = imageFilter.sharpen();
       break;
@@ -168,10 +166,13 @@ function filterIt() {
     case "Prewitt":
       currentFilter = imageFilter.prewitt();
       break;
+    case "uniform": {
+      currentFilter = imageFilter.uniform();
+      break;
+    }
     default:
       imageToCanvas(imageFile.files[0]);
       return;
-      break;
   }
 
   imageContext.putImageData(currentFilter.getImageData(), 0, 0);
