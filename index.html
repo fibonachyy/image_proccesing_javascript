@@ -8,19 +8,21 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="area">
-            Drop image here
-            <small>or</small>
-            click to add
-            <small>(.jpg, .png, .gif)</small>
-            <input type="file" id="file" />
+    <div class="container">
+        <div id="wrapper">
+            <div id="area">
+                Drop image here
+                <small>or</small>
+                click to add
+                <small>(.jpg, .png, .gif)</small>
+                <input type="file" id="file" />
+            </div>
+            <canvas id="image"></canvas>
         </div>
-        <canvas id="image"></canvas>
-    </div>
+        
+        <div id="footer"></div>
 
-    <footer>Filters:</footer>
-    
+    </div>
     <script src="ysFilters.js"></script>
     <script src="app.js"></script>
 </body>
